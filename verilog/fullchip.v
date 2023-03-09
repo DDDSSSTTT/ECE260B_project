@@ -1,6 +1,6 @@
 // Created by prof. Mingu Kang @VVIP Lab in UCSD ECE department
 // Please do not spread this code without permission 
-module fullchip (clk, mem_in, inst, reset);
+module fullchip (clk, mem_in, inst, reset, out, sum_out);
 
 parameter col = 8;
 parameter bw = 8;
@@ -9,7 +9,7 @@ parameter pr = 16;
 
 input  clk; 
 input  [pr*bw-1:0] mem_in; 
-input  [16:0] inst; 
+input  [18:0] inst; //sfp added to core, 2 more bits instr needed 
 input  reset;
 
 

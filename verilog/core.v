@@ -12,7 +12,7 @@ output [bw_psum*col-1:0] out;
 wire   [bw_psum*col-1:0] pmem_out;
 input  [pr*bw-1:0] mem_in;
 input  clk;
-input  [16:0] inst; 
+input  [18:0] inst; //Add 2 more bits for sfp related instructions
 input  reset;
 
 wire  [pr*bw-1:0] mac_in;
@@ -20,6 +20,7 @@ wire  [pr*bw-1:0] kmem_out;
 wire  [pr*bw-1:0] qmem_out;
 wire  [bw_psum*col-1:0] pmem_in;
 wire  [bw_psum*col-1:0] fifo_out;
+wire  [bw_psum*col-1:0] sfp_in;
 wire  [bw_psum*col-1:0] sfp_out;
 wire  [bw_psum*col-1:0] array_out;
 wire  [col-1:0] fifo_wr;
@@ -34,6 +35,10 @@ wire  kmem_wr;
 wire  pmem_rd;
 wire  pmem_wr; 
 
+reg [bw_psum+3:0] zero_sum_in = 0;
+
+assign div_ready = inst[18];
+assign acc_ready = inst[17];
 assign ofifo_rd = inst[16];
 assign qkmem_add = inst[15:12];
 assign pmem_add = inst[11:8];
@@ -47,6 +52,8 @@ assign pmem_wr = inst[0];
 
 assign mac_in  = inst[6] ? kmem_out : qmem_out;
 assign pmem_in = fifo_out;
+assign sfp_in = pmem_out;
+assign out = sfp_out;
 
 mac_array #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) mac_array_instance (
         .in(mac_in), 
@@ -95,6 +102,16 @@ sram_w16 #(.sram_bit(col*bw_psum)) psum_mem_instance (
         .A(pmem_add)
 );
 
+sfp_row #(.col(), .bw(), .bw_psum()) sfp_instance(
+	.clk(clk), 
+	.acc(acc_ready), 
+	.div(div_ready), 
+	.fifo_ext_rd(acc_ready), //Not ideal, but use this solution at first
+	.sum_in(zero_sum_in), //Curently discard this input, MUST CHANGE if we go dual-core,
+	.sum_out(sum_out), 
+	.sfp_in(sfp_in), 
+	.sfp_out(sfp_out)
+);
 
 
   //////////// For printing purpose ////////////

@@ -37,7 +37,7 @@ reg reset = 1;
 reg clk = 0;
 reg [pr*bw-1:0] mem_in; 
 reg ofifo_rd = 0;
-wire [16:0] inst; 
+wire [18:0] inst; //Changed to 18:0 for sfp instr(acc,div)
 reg qmem_rd = 0;
 reg qmem_wr = 0; 
 reg kmem_rd = 0; 
@@ -48,8 +48,11 @@ reg execute = 0;
 reg load = 0;
 reg [3:0] qkmem_add = 0;
 reg [3:0] pmem_add = 0;
+reg div_ready = 0;
+reg acc_ready = 0;
 
-
+assign inst[18] = div_ready;
+assign inst[17] = acc_ready;
 assign inst[16] = ofifo_rd;
 assign inst[15:12] = qkmem_add;
 assign inst[11:8]  = pmem_add;
@@ -62,19 +65,20 @@ assign inst[2] = kmem_wr;
 assign inst[1] = pmem_rd;
 assign inst[0] = pmem_wr;
 
-
-
 reg [bw_psum-1:0] temp5b;
 reg [bw_psum+3:0] temp_sum;
 reg [bw_psum*col-1:0] temp16b;
-
+wire [bw_psum+3:0] sum_out;
+wire [bw_psum*col-1:0] out; 
 
 
 fullchip #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) fullchip_instance (
       .reset(reset),
       .clk(clk), 
       .mem_in(mem_in), 
-      .inst(inst)
+      .inst(inst),
+      .out(out),
+      .sum_out(sum_out)
 );
 
 
@@ -360,8 +364,36 @@ $display("##### move ofifo to pmem #####");
 
 ///////////////////////////////////////////
 
-
-
+#0.5 clk = 1'b0;
+//////Test cases for full_chip with sfp needed to be add here///////
+for(t=0; t<total_cycle; t=t+1)begin  
+  pmem_rd = 1;// start loading data from pmem to sfp, current pmem address = 0
+  div_ready = 0;
+  #0.5 clk = 1'b1;
+  #0.5 clk = 1'b0;
+  acc_ready=1;
+  #0.5 clk = 1'b1; //acc: 0 -> 1, sfp_in -> sum_q
+  #0.5 clk = 1'b0; 
+  #0.5 clk = 1'b1;
+  #0.5 clk = 1'b0; // sum_q -> sum_out
+  $display("abs sum of col %d: %d", t, sum_out);
+  acc_ready = 0; div_ready = 1;
+  #0.5 clk = 1'b1; //div_q 0 -> 1; sum_q -> sum_this_core, sum_2core = sum_this_core + sum_in
+  #0.5 clk = 1'b0;
+  #0.5 clk = 1'b1; // norm_x = x/sum_2core
+  #0.5 clk = 1'b0;
+  $display("sfp out of col %d: %40h", t, out);
+  pmem_add = pmem_add + 1;
+end
+pmem_rd = 0; div_ready=1;
+#0.5 clk = 1'b1; //div_q 0 -> 1; sum_q -> sum_this_core, sum_2core = sum_this_core + sum_in
+#0.5 clk = 1'b0;  
+#0.5 clk = 1'b1; // norm_x = x/sum_2core
+#0.5 clk = 1'b0;
+pmem_add = 0;
+$display("sfp out of col 1 ~ 8: %40h", out);
+   
+////////////
 
   #10 $finish;
 
