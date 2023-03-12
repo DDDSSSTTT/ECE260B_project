@@ -1,7 +1,7 @@
 #@ # 
 #@ # Running dc_shell Version Q-2019.12-SP5-3 for linux64 -- Dec 04, 2020
-#@ # Date:   Wed Mar  8 17:43:56 2023
-#@ # Run by: s1ding@ieng6-ece-20.ucsd.edu
+#@ # Date:   Thu Mar  9 18:05:19 2023
+#@ # Run by: s1ding@ieng6-ece-14.ucsd.edu
 #@ 
 
 source /software/ECE/DesignCompiler-Q2019.12/syn/Q-2019.12-SP5-3/admin/setup/.synopsys_dc.setup
@@ -6779,3 +6779,49 @@ source run_dc.tcl
 #@ # Compile
 #@ # Source user compile options
 #@ compile_ultra -no_autoungroup -timing_high_effort_script -exact_map
+#@ 
+#@ # Write Out Design - Hierarchical
+#@ current_design $top_module
+#@ 
+#@ change_names -rules verilog -hierarchy
+#@ 
+#@ write -format verilog -hier -output [format "%s%s" $top_module .out.v]
+#@ 
+#@ # Write Reports
+#@ redirect [format "%s%s" log/ $top_module _area.rep] { report_area }
+#@ redirect -append [format "%s%s%s" log/ $top_module _area.rep] { report_reference }
+#@ redirect [format "%s%s%s" log/ $top_module _power.rep] { report_power }
+#@ redirect [format "%s%s%s" log/ $top_module _timing.rep]   { report_timing -path full -max_paths 100 -nets -transition_time -capacitance -significant_digits 3 -nosplit}
+#@ 
+#@ set inFile  [open log/$top_module\_area.rep]
+#@ while { [gets $inFile line]>=0 } {
+#@     if { [regexp {Total cell area:} $line] } {
+#@         set AREA [lindex $line 3]
+#@     }
+#@ }
+#@ close $inFile
+#@ set inFile  [open log/$top_module\_power.rep]
+#@ while { [gets $inFile line]>=0 } {
+#@     if { [regexp {Total Dynamic Power} $line] } {
+#@         set PWR [lindex $line 4]
+#@     } elseif { [regexp {Cell Leakage Power} $line] } {  
+#@         set LEAK [lindex $line 4] 
+#@     }
+#@ }
+#@ close $inFile
+#@ 
+#@ set unmapped_designs [get_designs -filter "is_unmapped == true" $top_module]
+#@ if {  [sizeof_collection $unmapped_designs] != 0 } {
+#@ 	echo "****************************************************"
+#@ 	echo "* ERROR!!!! Compile finished with unmapped logic.  *"
+#@ 	echo "****************************************************"
+#@ }
+#@ # Done
+#@ sh date
+#@ sh uptime
+#@ 
+#@ # Done
+#@ echo "run.scr completed successfully"
+#@ 
+#@ # -- End source run_dc.tcl
+
