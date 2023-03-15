@@ -2,7 +2,7 @@
 // Please do not spread this code without permission 
 module mac_16in (out, a, b);
 
-parameter bw = 8;
+parameter bw = 4;
 parameter bw_psum = 2*bw+6;
 parameter pr = 64; // parallel factor: number of inputs = 64
 
@@ -16,11 +16,11 @@ wire		[2*bw-1:0]	product1	;
 wire		[2*bw-1:0]	product2	;
 wire		[2*bw-1:0]	product3	;
 wire		[2*bw-1:0]	product4	;
-wire		[2*bw-1:0]	product5	;
+wire		[2*bw-1:0]	product5	; 
 wire		[2*bw-1:0]	product6	;
 wire		[2*bw-1:0]	product7	;
 wire		[2*bw-1:0]	product8	;
-wire	[2*bw-1:0]	product9	;
+wire		[2*bw-1:0]	product9	;
 wire		[2*bw-1:0]	product10	;
 wire		[2*bw-1:0]	product11	;
 wire		[2*bw-1:0]	product12	;

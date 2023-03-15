@@ -2,7 +2,7 @@
 // Please do not spread this code without permission 
 module mac_col (clk, reset, out, q_in, q_out, i_inst, fifo_wr, o_inst);
 
-parameter bw = 8;
+parameter bw = 4;
 parameter bw_psum = 2*bw+6;
 parameter pr = 8;
 parameter col_id = 0;
