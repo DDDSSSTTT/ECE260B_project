@@ -17,13 +17,14 @@ input  reset;
 
 
 
-output [bw_psum+3:0] sum_out1,sum_out2;
+wire [bw_psum+3:0] sum_out1,sum_out2;
 output [bw_psum*col-1:0] out1,out2;
 
 
 core #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) core_instance1 (
       .reset(reset), 
-      .clk(clk), 
+      .clk(clk),
+      .sum_in(sum_out2), 
       .sum_out(sum_out1),
       .out(out1),
       .mem_in(mem_in1), 
@@ -31,7 +32,8 @@ core #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) core_instance1 (
 );
 core #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) core_instance2 (
       .reset(reset), 
-      .clk(clk), 
+      .clk(clk),
+      .sum_in(sum_out1),  
       .sum_out(sum_out2),
       .out(out2),
       .mem_in(mem_in2), 

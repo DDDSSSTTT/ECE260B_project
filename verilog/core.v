@@ -1,6 +1,6 @@
 // Created by prof. Mingu Kang @VVIP Lab in UCSD ECE department
 // Please do not spread this code without permission 
-module core (clk, sum_out, mem_in, out, inst, reset);
+module core (clk, sum_in, sum_out, mem_in, out, inst, reset);
 
 parameter col = 8;
 parameter bw = 4;
@@ -11,6 +11,7 @@ output [bw_psum+3:0] sum_out;
 output [bw_psum*col-1:0] out;
 wire   [bw_psum*col-1:0] pmem_out;
 input  [pr*bw-1:0] mem_in;
+input [bw_psum+3:0] sum_in;
 input  clk;
 input  [18:0] inst; //Add 2 more bits for sfp related instructions
 input  reset;
@@ -107,7 +108,7 @@ sfp_row #(.col(), .bw(), .bw_psum()) sfp_instance(
 	.acc(acc_ready), 
 	.div(div_ready), 
 	.fifo_ext_rd(acc_ready), //Not ideal, but use this solution at first
-	.sum_in(zero_sum_in), //Curently discard this input, MUST CHANGE if we go dual-core,
+	.sum_in(sum_in), //Curently discard this input, MUST CHANGE if we go dual-core,
 	.sum_out(sum_out), 
 	.sfp_in(sfp_in), 
 	.sfp_out(sfp_out)
