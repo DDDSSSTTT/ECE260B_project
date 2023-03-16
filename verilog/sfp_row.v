@@ -3,7 +3,7 @@
 module sfp_row (clk, ext_rd_clk, acc, div, fifo_ext_rd, sum_in, sum_out, sfp_in, sfp_out, reset);
 
   parameter col = 8;
-  parameter bw = 8;
+  parameter bw = 4;
   parameter bw_psum = 2*bw+4;
 
   input  clk, div, acc, fifo_ext_rd;

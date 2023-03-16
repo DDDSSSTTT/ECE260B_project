@@ -3,7 +3,7 @@
 module fullchip (clk_1, clk_2, mem_in_1, mem_in_2, inst, reset, fifo_ext_rd, out_1, out_2, sum_out_1, sum_out_2);
 
 parameter col = 8;
-parameter bw = 8;
+parameter bw = 4;
 parameter bw_psum = 2*bw+4;
 parameter pr = 16;
 
@@ -44,5 +44,28 @@ core #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) core_instance_2 (
       .inst(inst),
       .fifo_ext_rd(fifo_ext_rd)
 );
+
+// fifo_depth16 #(.bw(bw), .simd(simd)) fifo_instance1(
+//       .rd_clk(), 
+//       .wr_clk(), 
+//       .in(), 
+//       .out(), 
+//       .rd(), 
+//       .wr(), 
+//       .o_full(), 
+//       .o_empty(), 
+//       .reset()
+// );
+// fifo_depth16 #(.bw(bw), .simd(simd)) fifo_instance2(
+//       .rd_clk(), 
+//       .wr_clk(), 
+//       .in(), 
+//       .out(), 
+//       .rd(), 
+//       .wr(), 
+//       .o_full(), 
+//       .o_empty(), 
+//       .reset()
+// );
 
 endmodule

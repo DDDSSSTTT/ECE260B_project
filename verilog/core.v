@@ -3,7 +3,7 @@
 module core (reset, clk, ext_rd_clk, sum_in, sum_out, mem_in, out, inst, fifo_ext_rd);
 
 parameter col = 8;
-parameter bw = 8;
+parameter bw = 4;
 parameter bw_psum = 2*bw+4;
 parameter pr = 16;
 
@@ -11,6 +11,7 @@ output [bw_psum+3:0] sum_out;
 output [bw_psum*col-1:0] out;
 wire   [bw_psum*col-1:0] pmem_out;
 input  [pr*bw-1:0] mem_in;
+input [bw_psum+3:0] sum_in;
 input  clk;
 input  ext_rd_clk;
 input  [18:0] inst; //Add 2 more bits for sfp related instructions
