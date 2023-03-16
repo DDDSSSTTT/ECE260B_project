@@ -1,43 +1,48 @@
 // Created by prof. Mingu Kang @VVIP Lab in UCSD ECE department
 // Please do not spread this code without permission 
-module fullchip (clk1, clk2, mem_in1, mem_in2, inst, reset, out1, out2);
+module fullchip (clk_1, clk_2, mem_in_1, mem_in_2, inst, reset, fifo_ext_rd, out_1, out_2, sum_out_1, sum_out_2);
 
 parameter col = 8;
 parameter bw = 4;
 parameter bw_psum = 2*bw+4;
 parameter pr = 16;
 
-//Insert fifos for dual-core
-parameter simd = 1;
-
-input  clk1, clk2; 
-input  [pr*bw-1:0] mem_in1,mem_in2; 
+input  clk_1; 
+input  clk_2;
+input  [pr*bw-1:0] mem_in_1; 
+input  [pr*bw-1:0] mem_in_2;
 input  [18:0] inst; //sfp added to core, 2 more bits instr needed 
 input  reset;
+input  fifo_ext_rd;
+
+output [col*bw_psum-1:0] out_core1;
+output [col*bw_psum-1:0] out_core2;
+wire  [bw_psum+3:0] sum_out_1;
+wire  [bw_psum+3:0] sum_out_2;
 
 
-
-wire [bw_psum+3:0] sum_out1,sum_out2;
-output [bw_psum*col-1:0] out1,out2;
-
-
-core #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) core_instance1 (
+core #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) core_instance_1 (
       .reset(reset), 
-      .clk(clk1),
-      .sum_in(sum_out2), 
-      .sum_out(sum_out1),
-      .out(out1),
-      .mem_in(mem_in1), 
-      .inst(inst)
+      .clk(clk_1), 
+      .ext_rd_clk(clk_2),
+      .sum_in(sum_out_2),
+      .sum_out(sum_out_1),
+      .out(out_1),
+      .mem_in(mem_in_1), 
+      .inst(inst),
+      .fifo_ext_rd(fifo_ext_rd)
 );
-core #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) core_instance2 (
+
+core #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) core_instance_2 (
       .reset(reset), 
-      .clk(clk2),
-      .sum_in(sum_out1),  
-      .sum_out(sum_out2),
-      .out(out2),
-      .mem_in(mem_in2), 
-      .inst(inst)
+      .clk(clk_2), 
+      .ext_rd_clk(clk_1),
+      .sum_in(sum_out_1),
+      .sum_out(sum_out_2),
+      .out(out_2),
+      .mem_in(mem_in_2), 
+      .inst(inst),
+      .fifo_ext_rd(fifo_ext_rd)
 );
 
 // fifo_depth16 #(.bw(bw), .simd(simd)) fifo_instance1(
