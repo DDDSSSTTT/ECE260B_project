@@ -25,6 +25,7 @@ integer  weight [col*pr-1:0];
 integer  K0[col-1:0][pr-1:0], K1[col-1:0][pr-1:0];
 integer  Q[total_cycle-1:0][pr-1:0];
 integer  result[total_cycle-1:0][col-1:0];
+integer  result2[total_cycle-1:0][col-1:0];
 integer  sum[total_cycle-1:0];
 
 integer i,j,k,t,p,q,s,u, m;
@@ -66,8 +67,10 @@ assign inst[1] = pmem_rd;
 assign inst[0] = pmem_wr;
 
 reg [bw_psum-1:0] temp5b;
+reg [bw_psum-1:0] temp5b2;
 reg [bw_psum+3:0] temp_sum;
 reg [bw_psum*col-1:0] temp16b;
+reg [bw_psum*col-1:0] temp16b2;
 wire [bw_psum+3:0] sum_out1, sum_out2;
 wire [bw_psum*col-1:0] out1, out2; 
 
@@ -79,8 +82,6 @@ fullchip #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) fullchip_instance (
   .mem_in1(mem_in1), 
   .mem_in2(mem_in2), 
   .inst(inst),  
-  .sum_out1(sum_out1), 
-  .sum_out2(sum_out2), 
   .out1(out1), 
   .out2(out2)
 );
@@ -101,12 +102,7 @@ $display("##### Q data txt reading #####");
 
   qk_file = $fopen("qdata.txt", "r");
 
-  //// To get rid of first 3 lines in data file ////
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-
+  //// No need to discard lines since the file head is cleaned////
 
   for (q=0; q<total_cycle; q=q+1) begin
     for (j=0; j<pr; j=j+1) begin
@@ -140,13 +136,7 @@ $display("##### K data core0 txt reading #####");
 
   qk_file = $fopen("kdata_core0.txt", "r");
 
-  //// To get rid of first 4 lines in data file ////
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-
-
+//// No need to discard lines since the file head is cleaned////
 
 
   for (q=0; q<col; q=q+1) begin
@@ -166,18 +156,10 @@ $display("##### K data core1 txt reading #####");
     #0.5 clk = 1'b0;   
     #0.5 clk = 1'b1;   
   end
-  reset = 0;
 
   qk_file = $fopen("kdata_core1.txt", "r");
 
-  //// To get rid of first 4 lines in data file ////
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-
-
-
+//// No need to discard lines since the file head is cleaned////
 
   for (q=0; q<col; q=q+1) begin
     for (j=0; j<pr; j=j+1) begin
@@ -201,6 +183,7 @@ $display("##### Estimated multiplication result #####");
   for (t=0; t<total_cycle; t=t+1) begin
      for (q=0; q<col; q=q+1) begin
        result[t][q] = 0;
+       result2[t][q] = 0;
      end
   end
 
@@ -208,14 +191,18 @@ $display("##### Estimated multiplication result #####");
      for (q=0; q<col; q=q+1) begin
          for (k=0; k<pr; k=k+1) begin
             result[t][q] = result[t][q] + Q[t][k] * K0[q][k];
+	    result2[t][q] = result2[t][q] + Q[t][k] * K1[q][k];
          end
 
          temp5b = result[t][q];
+	 temp5b2 = result2[t][q];
          temp16b = {temp16b[139:0], temp5b};
+	 temp16b2 = {temp16b2[139:0], temp5b2};
      end
 
      //$display("%d %d %d %d %d %d %d %d", result[t][0], result[t][1], result[t][2], result[t][3], result[t][4], result[t][5], result[t][6], result[t][7]);
-     $display("prd @cycle%2d: %40h", t, temp16b);
+     $display("prd core 0 @cycle%2d: %40h", t, temp16b);
+     $display("prd core 1 @cycle%2d: %40h", t, temp16b2);
   end
 
 //////////////////////////////////////////////

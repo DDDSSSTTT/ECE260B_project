@@ -103,12 +103,12 @@ sram_w16 #(.sram_bit(col*bw_psum)) psum_mem_instance (
         .A(pmem_add)
 );
 
-sfp_row #(.col(), .bw(), .bw_psum()) sfp_instance(
+sfp_row #(.col(col), .bw(bw), .bw_psum(bw_psum)) sfp_instance(
 	.clk(clk), 
 	.acc(acc_ready), 
 	.div(div_ready), 
 	.fifo_ext_rd(acc_ready), //Not ideal, but use this solution at first
-	.sum_in(sum_in), //Curently discard this input, MUST CHANGE if we go dual-core,
+	.sum_in(sum_in),
 	.sum_out(sum_out), 
 	.sfp_in(sfp_in), 
 	.sfp_out(sfp_out)
