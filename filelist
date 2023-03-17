@@ -1,4 +1,5 @@
-./verilog/fullchip_tb.v
+#./verilog/fullchip_tb.v
+./verilog/dualcore_tb.v
 ./verilog/fullchip.v
 ./verilog/core.v
 ./verilog/sync.v

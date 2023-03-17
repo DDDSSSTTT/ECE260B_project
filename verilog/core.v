@@ -103,7 +103,7 @@ sram_w16 #(.sram_bit(col*bw_psum)) psum_mem_instance (
         .A(pmem_add)
 );
 
-sfp_row #(.col(), .bw(), .bw_psum()) sfp_instance(
+sfp_row #(.col(col), .bw(bw), .bw_psum(bw_psum)) sfp_instance(
 	.clk(clk), 
 	.acc(acc_ready), 
 	.div(div_ready), 

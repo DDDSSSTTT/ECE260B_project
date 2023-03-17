@@ -25,8 +25,12 @@ integer  weight [col*pr-1:0];
 integer  K0[col-1:0][pr-1:0], K1[col-1:0][pr-1:0];
 integer  Q[total_cycle-1:0][pr-1:0];
 integer  result[total_cycle-1:0][col-1:0];
-integer  sum[total_cycle-1:0];
-
+integer  result2[total_cycle-1:0][col-1:0];
+integer  sfp_result[total_cycle-1:0][col-1:0];
+integer  sfp_result2[total_cycle-1:0][col-1:0];
+integer  this_sum[total_cycle-1:0];
+integer  this_sum2[total_cycle-1:0];
+integer  abs_temp;
 integer i,j,k,t,p,q,s,u, m;
 
 
@@ -37,38 +41,53 @@ reg reset = 1;
 reg clk = 0;
 reg [pr*bw-1:0] mem_in1, mem_in2;
 reg ofifo_rd = 0;
-wire [18:0] inst; //Changed to 18:0 for sfp instr(acc,div)
+wire [18:0] inst,inst1,inst2; //Changed to 18:0 for sfp instr(acc,div), and also a tricky structure for inst
 reg qmem_rd = 0;
-reg qmem_wr = 0; 
-reg kmem_rd = 0; 
+reg qmem_wr = 0;
+reg qmem_wr2 = 0; 
+reg kmem_rd = 0;
 reg kmem_wr = 0;
+reg kmem_wr2 = 0;
 reg pmem_rd = 0; 
 reg pmem_wr = 0; 
 reg execute = 0;
 reg load = 0;
 reg [3:0] qkmem_add = 0;
+reg [3:0] qkmem_add2 = 0;
 reg [3:0] pmem_add = 0;
 reg div_ready = 0;
 reg acc_ready = 0;
 
-assign inst[18] = div_ready;
-assign inst[17] = acc_ready;
-assign inst[16] = ofifo_rd;
-assign inst[15:12] = qkmem_add;
-assign inst[11:8]  = pmem_add;
-assign inst[7] = execute;
-assign inst[6] = load;
-assign inst[5] = qmem_rd;
-assign inst[4] = qmem_wr;
-assign inst[3] = kmem_rd;
-assign inst[2] = kmem_wr;
-assign inst[1] = pmem_rd;
-assign inst[0] = pmem_wr;
+assign inst1[18] = div_ready;
+assign inst1[17] = acc_ready;
+assign inst1[16] = ofifo_rd;
+assign inst1[15:12] = qkmem_add;
+assign inst1[11:8]  = pmem_add;
+assign inst1[7] = execute;
+assign inst1[6] = load;
+assign inst1[5] = qmem_rd;
+assign inst1[4] = qmem_wr;
+assign inst1[3] = kmem_rd;
+assign inst1[2] = kmem_wr;
+assign inst1[1] = pmem_rd;
+assign inst1[0] = pmem_wr;
 
-reg [bw_psum-1:0] temp5b;
-reg [bw_psum+3:0] temp_sum;
-reg [bw_psum*col-1:0] temp16b;
-wire [bw_psum+3:0] sum_out1, sum_out2;
+assign inst2[18] = div_ready;
+assign inst2[17] = acc_ready;
+assign inst2[16] = ofifo_rd;
+assign inst2[15:12] = qkmem_add2;
+assign inst2[11:8]  = pmem_add;
+assign inst2[7] = execute;
+assign inst2[6] = load;
+assign inst2[5] = qmem_rd;
+assign inst2[4] = qmem_wr2;
+assign inst2[3] = kmem_rd;
+assign inst2[2] = kmem_wr2;
+assign inst2[1] = pmem_rd;
+assign inst2[0] = pmem_wr;
+
+reg [bw_psum-1:0] temp5b, temp5b2;
+reg [bw_psum*col-1:0] temp16b,temp16b2;
 wire [bw_psum*col-1:0] out1, out2; 
 
 
@@ -78,9 +97,8 @@ fullchip #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) fullchip_instance (
   .clk2(clk), 
   .mem_in1(mem_in1), 
   .mem_in2(mem_in2), 
-  .inst(inst),  
-  .sum_out1(sum_out1), 
-  .sum_out2(sum_out2), 
+  .inst1(inst1),
+  .inst2(inst2),  
   .out1(out1), 
   .out2(out2)
 );
@@ -101,11 +119,7 @@ $display("##### Q data txt reading #####");
 
   qk_file = $fopen("qdata.txt", "r");
 
-  //// To get rid of first 3 lines in data file ////
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
+  //// Remove data discarding////
 
 
   for (q=0; q<total_cycle; q=q+1) begin
@@ -140,14 +154,7 @@ $display("##### K data core0 txt reading #####");
 
   qk_file = $fopen("kdata_core0.txt", "r");
 
-  //// To get rid of first 4 lines in data file ////
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-
-
-
+  //// Remove data discarding ////
 
   for (q=0; q<col; q=q+1) begin
     for (j=0; j<pr; j=j+1) begin
@@ -166,18 +173,10 @@ $display("##### K data core1 txt reading #####");
     #0.5 clk = 1'b0;   
     #0.5 clk = 1'b1;   
   end
-  reset = 0;
 
   qk_file = $fopen("kdata_core1.txt", "r");
 
-  //// To get rid of first 4 lines in data file ////
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-
-
-
+  //// Remove Data Discarding ////
 
   for (q=0; q<col; q=q+1) begin
     for (j=0; j<pr; j=j+1) begin
@@ -201,6 +200,7 @@ $display("##### Estimated multiplication result #####");
   for (t=0; t<total_cycle; t=t+1) begin
      for (q=0; q<col; q=q+1) begin
        result[t][q] = 0;
+       result2[t][q] = 0;
      end
   end
 
@@ -208,14 +208,18 @@ $display("##### Estimated multiplication result #####");
      for (q=0; q<col; q=q+1) begin
          for (k=0; k<pr; k=k+1) begin
             result[t][q] = result[t][q] + Q[t][k] * K0[q][k];
+            result2[t][q] = result2[t][q] + Q[t][k] * K1[q][k];
          end
 
          temp5b = result[t][q];
          temp16b = {temp16b[139:0], temp5b};
+         temp5b2 = result2[t][q];
+         temp16b2 = {temp16b2[139:0], temp5b2};
      end
 
      //$display("%d %d %d %d %d %d %d %d", result[t][0], result[t][1], result[t][2], result[t][3], result[t][4], result[t][5], result[t][6], result[t][7]);
-     $display("prd @cycle%2d: %40h", t, temp16b);
+     $display("prd array_out of core 0 @cycle%2d: %40h", t, temp16b);
+     $display("prd array_out of core 1 @cycle%2d: %40h", t, temp16b2);
   end
 
 //////////////////////////////////////////////
@@ -225,14 +229,15 @@ $display("##### Estimated multiplication result #####");
 
 
 
-///// Qmem writing  /////
+///// Core 0 Qmem writing  /////
 
-$display("##### Qmem writing  #####");
-
+$display("##### Core 0 Qmem writing  #####");
   for (q=0; q<total_cycle; q=q+1) begin
 
     #0.5 clk = 1'b0;  
     qmem_wr = 1;  if (q>0) qkmem_add = qkmem_add + 1; 
+
+    //Write q data to core 0
     
     mem_in1[1*bw-1:0*bw] = Q[q][0];
     mem_in1[2*bw-1:1*bw] = Q[q][1];
@@ -250,6 +255,25 @@ $display("##### Qmem writing  #####");
     mem_in1[14*bw-1:13*bw] = Q[q][13];
     mem_in1[15*bw-1:14*bw] = Q[q][14];
     mem_in1[16*bw-1:15*bw] = Q[q][15];
+
+    #0.5 clk = 1'b1;  
+
+  end
+
+
+  #0.5 clk = 1'b0;  
+  qmem_wr = 0; 
+  qkmem_add = 0;
+  #0.5 clk = 1'b1;  
+///////////////////////////////////////////
+
+///// Core 1 Qmem writing  /////
+$display("##### Core 1 Qmem writing  #####");
+
+  for (q=0; q<total_cycle; q=q+1) begin
+
+    #0.5 clk = 1'b0;  
+    qmem_wr2 = 1;  if (q>0) qkmem_add2 = qkmem_add2 + 1; 
 
     mem_in2[1*bw-1:0*bw] = Q[q][0];
     mem_in2[2*bw-1:1*bw] = Q[q][1];
@@ -274,17 +298,14 @@ $display("##### Qmem writing  #####");
 
 
   #0.5 clk = 1'b0;  
-  qmem_wr = 0; 
-  qkmem_add = 0;
+  qmem_wr2 = 0; 
+  qkmem_add2 = 0;
   #0.5 clk = 1'b1;  
 ///////////////////////////////////////////
 
 
 
-
-
 ///// Core 0 Kmem writing  /////
-
 $display("##### Core 0 Kmem writing #####");
 
   for (q=0; q<col; q=q+1) begin
@@ -320,13 +341,12 @@ $display("##### Core 0 Kmem writing #####");
 ///////////////////////////////////////////
 
 ///// Core 1 Kmem writing  /////
-
 $display("##### Core 1 Kmem writing #####");
 
   for (q=0; q<col; q=q+1) begin
 
     #0.5 clk = 1'b0;  
-    kmem_wr = 1; if (q>0) qkmem_add = qkmem_add + 1; 
+    kmem_wr2 = 1; if (q>0) qkmem_add2 = qkmem_add2 + 1; 
     
     mem_in2[1*bw-1:0*bw] = K1[q][0];
     mem_in2[2*bw-1:1*bw] = K1[q][1];
@@ -350,8 +370,8 @@ $display("##### Core 1 Kmem writing #####");
   end
 
   #0.5 clk = 1'b0;  
-  kmem_wr = 0;  
-  qkmem_add = 0;
+  kmem_wr2 = 0;  
+  qkmem_add2 = 0;
   #0.5 clk = 1'b1;  
 ///////////////////////////////////////////
 
@@ -372,13 +392,14 @@ $display("##### K data loading to processor #####");
     if (q==1) kmem_rd = 1;
     if (q>1) begin
        qkmem_add = qkmem_add + 1;
+       qkmem_add2 = qkmem_add2 + 1;
     end
 
     #0.5 clk = 1'b1;  
   end
 
   #0.5 clk = 1'b0;  
-  kmem_rd = 0; qkmem_add = 0;
+  kmem_rd = 0; qkmem_add = 0; qkmem_add2 = 0;
   #0.5 clk = 1'b1;  
 
   #0.5 clk = 1'b0;  
@@ -406,13 +427,14 @@ $display("##### execute #####");
 
     if (q>0) begin
        qkmem_add = qkmem_add + 1;
+       qkmem_add2 = qkmem_add2 + 1;
     end
 
     #0.5 clk = 1'b1;  
   end
 
   #0.5 clk = 1'b0;  
-  qmem_rd = 0; qkmem_add = 0; execute = 0;
+  qmem_rd = 0; qkmem_add = 0; qkmem_add2 = 0; execute = 0;
   #0.5 clk = 1'b1;  
 
 
@@ -449,7 +471,39 @@ $display("##### move ofifo to pmem #####");
 ///////////////////////////////////////////
 
 #0.5 clk = 1'b0;
-//////Test cases for full_chip with sfp needed to be add here///////
+//////Test cases for sfp///////
+for (t=0; t<total_cycle; t=t+1) begin
+  this_sum[t] = 0;
+  this_sum2[t] = 0;
+  for (q=0; q<col; q=q+1) begin
+    if (result[t][q]>0) begin
+        abs_temp = result[t][q];
+    end else begin
+        abs_temp = -result[t][q];
+    end
+    this_sum[t]= this_sum[t] + abs_temp;
+    if (result2[t][q]>0) begin
+        abs_temp = result2[t][q];
+    end else begin
+        abs_temp = -result2[t][q];
+    end
+    this_sum2[t]= this_sum2[t] + abs_temp;
+  end
+  this_sum[t] = this_sum[t]>>7;
+  this_sum2[t] = this_sum2[t]>>7;
+  for (q=0; q<col; q=q+1) begin
+    sfp_result[t][q] = result[t][q]/(this_sum[t] + this_sum2[t]);
+    sfp_result2[t][q] = result2[t][q]/(this_sum[t] + this_sum2[t]);
+  end
+  for (q=0; q<col; q=q+1) begin
+    temp5b = sfp_result[t][q];
+    temp5b2 = sfp_result2[t][q];
+    temp16b = {temp16b[139:0],temp5b};
+    temp16b2 = {temp16b2[139:0],temp5b2};
+  end
+  $display("prd sfp_out of core 0 @cycle%2d: %40h", t, temp16b);
+  $display("prd sfp_out of core 1 @cycle%2d: %40h", t, temp16b2);
+end  
 for(t=0; t<total_cycle; t=t+1)begin  
   pmem_rd = 1;// start loading data from pmem to sfp, current pmem address = 0
   div_ready = 0;
@@ -460,15 +514,13 @@ for(t=0; t<total_cycle; t=t+1)begin
   #0.5 clk = 1'b0; 
   #0.5 clk = 1'b1;
   #0.5 clk = 1'b0; // sum_q -> sum_out
-  $display("abs sum core 0 of col %d: %d", t, sum_out1);
-  $display("abs sum core 1 of col %d: %d", t, sum_out2);
   acc_ready = 0; div_ready = 1;
   #0.5 clk = 1'b1; //div_q 0 -> 1; sum_q -> sum_this_core, sum_2core = sum_this_core + sum_in
   #0.5 clk = 1'b0;
   #0.5 clk = 1'b1; // norm_x = x/sum_2core
   #0.5 clk = 1'b0;
-  $display("sfp out core 0 of col %d: %40h", t, out1);
-  $display("sfp out core 1 of col %d: %40h", t, out2);
+  $display("sfp out core 0 of cycle%2d: %40h", t, out1);
+  $display("sfp out core 1 of cycle%2d: %40h", t, out2);
   pmem_add = pmem_add + 1;
 end
 pmem_rd = 0; div_ready=1;
@@ -477,8 +529,6 @@ pmem_rd = 0; div_ready=1;
 #0.5 clk = 1'b1; // norm_x = x/sum_2core
 #0.5 clk = 1'b0;
 pmem_add = 0;
-$display("sfp out core 0 of col 1 ~ 8: %40h", out1);
-$display("sfp out core 1 of col 1 ~ 8: %40h", out2);   
 ////////////
 
   #10 $finish;

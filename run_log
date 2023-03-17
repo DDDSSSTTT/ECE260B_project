@@ -1,0 +1,62 @@
+VCD info: dumpfile dualcore_tb.vcd opened for output.
+##### Q data txt reading #####
+##### K data core0 txt reading #####
+##### K data core1 txt reading #####
+##### Estimated multiplication result #####
+prd core 0 @cycle 0: fffa8fffd2fffd3000bb00031000310003100031
+prd core 1 @cycle 0: fffd2fffd3000bb000310003100031000310002a
+prd core 0 @cycle 1: 00012fff3e0003900002fffb3fffb3fffb3fffb3
+prd core 1 @cycle 1: fff3e0003900002fffb3fffb3fffb3fffb3fffbe
+prd core 0 @cycle 2: fffd5fffdffff5b0005900007000070000700007
+prd core 1 @cycle 2: fffdffff5b000590000700007000070000700006
+prd core 0 @cycle 3: ffff4000c500016fff8efffddfffddfffddfffdd
+prd core 1 @cycle 3: 000c500016fff8efffddfffddfffddfffddfffe2
+prd core 0 @cycle 4: 000180001600001fffc900069000690006900069
+prd core 1 @cycle 4: 0001600001fffc9000690006900069000690005a
+prd core 0 @cycle 5: 00042fffd400021fffb3000af000af000af000af
+prd core 1 @cycle 5: fffd400021fffb3000af000af000af000af00096
+prd core 0 @cycle 6: 000ab0003c00017ffff2000a1000a1000a1000a1
+prd core 1 @cycle 6: 0003c00017ffff2000a1000a1000a1000a10008a
+prd core 0 @cycle 7: 0008dffff700059fff990008c0008c0008c0008c
+prd core 1 @cycle 7: ffff700059fff990008c0008c0008c0008c00078
+##### Core 0 Qmem writing  #####
+##### Core 1 Qmem writing  #####
+##### Core 0 Kmem writing #####
+##### Core 1 Kmem writing #####
+##### K data loading to processor #####
+##### execute #####
+##### move ofifo to pmem #####
+Memory write to PSUM mem add 0 0000f0005affff20001f0002a0002a0002a0002a 
+Memory write to PSUM mem add 0 fffa8fffd2fffd3000bb00031000310003100031 
+Memory write to PSUM mem add 1 00012fff3e0003900002fffb3fffb3fffb3fffb3 
+Memory write to PSUM mem add 1 fffaefffcbfffddfffeafffbefffbefffbefffbe 
+Memory write to PSUM mem add 2 fffffffff5000580002500006000060000600006 
+Memory write to PSUM mem add 2 fffd5fffdffff5b0005900007000070000700007 
+Memory write to PSUM mem add 3 ffff4000c500016fff8efffddfffddfffddfffdd 
+Memory write to PSUM mem add 3 00041fffb8ffff0fffbffffe2fffe2fffe2fffe2 
+Memory write to PSUM mem add 4 ffffbfffc400018000960005a0005a0005a0005a 
+Memory write to PSUM mem add 4 000180001600001fffc900069000690006900069 
+Memory write to PSUM mem add 5 00042fffd400021fffb3000af000af000af000af 
+Memory write to PSUM mem add 5 000140001d0007efffef00096000960009600096 
+Memory write to PSUM mem add 6 0000bfffbd00037000270008a0008a0008a0008a 
+Memory write to PSUM mem add 6 000ab0003c00017ffff2000a1000a1000a1000a1 
+Memory write to PSUM mem add 7 0008dffff700059fff990008c0008c0008c0008c 
+Memory write to PSUM mem add 7 00011fffbb00063ffff000078000780007800078 
+sfp out core 0 of col           0: ffff2ffff9ffff90001f00008000080000800008
+sfp out core 1 of col           0: 000020000fffffe0000500007000070000700007
+sfp out core 0 of col           1: 00002fffe50000800000ffff5ffff5ffff5ffff5
+sfp out core 1 of col           1: ffff5ffff9ffffbffffdffff7ffff7ffff7ffff7
+sfp out core 0 of col           2: ffff2ffff5fffc90001d00002000020000200002
+sfp out core 1 of col           2: 00000ffffd0001d0000c00002000020000200002
+sfp out core 0 of col           3: ffffe0002700004fffeaffff9ffff9ffff9ffff9
+sfp out core 1 of col           3: 0000dffff2ffffdffff3ffffaffffaffffaffffa
+sfp out core 0 of col           4: 000030000200000ffffa0000d0000d0000d0000d
+sfp out core 1 of col           4: 00000ffff900003000120000b0000b0000b0000b
+sfp out core 0 of col           5: 00005ffffd00002ffffb0000d0000d0000d0000d
+sfp out core 1 of col           5: 000010000200009fffff0000b0000b0000b0000b
+sfp out core 0 of col           6: 0000e0000500001fffff0000d0000d0000d0000d
+sfp out core 1 of col           6: 00000ffffb00004000030000b0000b0000b0000b
+sfp out core 0 of col           7: 0000b0000000007ffff80000b0000b0000b0000b
+sfp out core 1 of col           7: 00001ffffb00008fffff0000a0000a0000a0000a
+sfp out core 0 of col 1 ~ 8: 0000ffffff00009ffff50000f0000f0000f0000f
+sfp out core 1 of col 1 ~ 8: 00001ffff90000bfffff0000d0000d0000d0000d
