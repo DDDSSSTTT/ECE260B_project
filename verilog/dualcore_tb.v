@@ -86,6 +86,7 @@ assign inst2[2] = kmem_wr2;
 assign inst2[1] = pmem_rd;
 assign inst2[0] = pmem_wr;
 
+reg [1:0] fifo_full, fifo_empty;
 reg [bw_psum-1:0] temp5b, temp5b2;
 reg [bw_psum*col-1:0] temp16b,temp16b2;
 wire [bw_psum*col-1:0] out1, out2; 
@@ -94,11 +95,13 @@ wire [bw_psum*col-1:0] out1, out2;
 fullchip #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) fullchip_instance (
   .reset(reset),
   .clk1(clk), 
-  .clk2(clk), 
+  .clk2(!clk), 
   .mem_in1(mem_in1), 
   .mem_in2(mem_in2), 
   .inst1(inst1),
   .inst2(inst2),  
+  .fifo_full(fifo_full),
+  .fifo_empty(fifo_empty)
   .out1(out1), 
   .out2(out2)
 );
@@ -514,7 +517,10 @@ for(t=0; t<total_cycle; t=t+1)begin
   #0.5 clk = 1'b0; 
   #0.5 clk = 1'b1;
   #0.5 clk = 1'b0; // sum_q -> sum_out
-  acc_ready = 0; div_ready = 1;
+  acc_ready = 0;
+  #0.5 clk = 1'b1;
+  #0.5 clk = 1'b0;
+  div_ready = 1;
   #0.5 clk = 1'b1; //div_q 0 -> 1; sum_q -> sum_this_core, sum_2core = sum_this_core + sum_in
   #0.5 clk = 1'b0;
   #0.5 clk = 1'b1; // norm_x = x/sum_2core
