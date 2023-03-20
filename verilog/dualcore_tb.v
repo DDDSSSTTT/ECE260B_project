@@ -6,7 +6,7 @@
 module dualcore_tb;
 
 parameter total_cycle = 8;   // how many streamed Q vectors will be processed
-parameter bw = 8;            // Q & K vector bit precision
+parameter bw = 4;            // Q & K vector bit precision
 parameter bw_psum = 2*bw+4;  // partial sum bit precision
 parameter pr = 16;           // how many products added in each dot product 
 parameter col = 8;           // how many dot product units are equipped
@@ -218,8 +218,8 @@ $display("##### Estimated multiplication result #####");
      end
 
      //$display("%d %d %d %d %d %d %d %d", result[t][0], result[t][1], result[t][2], result[t][3], result[t][4], result[t][5], result[t][6], result[t][7]);
-     $display("prd array_out of core 0 @cycle%2d: %40h", t, temp16b);
-     $display("prd array_out of core 1 @cycle%2d: %40h", t, temp16b2);
+     $display("prd array_out of core 0 @cycle%2d: %24h", t, temp16b);
+     $display("prd array_out of core 1 @cycle%2d: %24h", t, temp16b2);
   end
 
 //////////////////////////////////////////////
@@ -501,8 +501,8 @@ for (t=0; t<total_cycle; t=t+1) begin
     temp16b = {temp16b[139:0],temp5b};
     temp16b2 = {temp16b2[139:0],temp5b2};
   end
-  $display("prd sfp_out of core 0 @cycle%2d: %40h", t, temp16b);
-  $display("prd sfp_out of core 1 @cycle%2d: %40h", t, temp16b2);
+  $display("prd sfp_out of core 0 @cycle%2d: %24h", t, temp16b);
+  $display("prd sfp_out of core 1 @cycle%2d: %24h", t, temp16b2);
 end  
 for(t=0; t<total_cycle; t=t+1)begin  
   pmem_rd = 1;// start loading data from pmem to sfp, current pmem address = 0
@@ -519,8 +519,8 @@ for(t=0; t<total_cycle; t=t+1)begin
   #0.5 clk = 1'b0;
   #0.5 clk = 1'b1; // norm_x = x/sum_2core
   #0.5 clk = 1'b0;
-  $display("sfp out core 0 of cycle%2d: %40h", t, out1);
-  $display("sfp out core 1 of cycle%2d: %40h", t, out2);
+  $display("sfp out core 0 of cycle%2d: %24h", t, out1);
+  $display("sfp out core 1 of cycle%2d: %24h", t, out2);
   pmem_add = pmem_add + 1;
 end
 pmem_rd = 0; div_ready=1;
