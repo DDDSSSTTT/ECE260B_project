@@ -34,19 +34,21 @@ mac_16in #(.bw(bw), .bw_psum(bw_psum), .pr(pr)) mac_16in_instance (
 ); 
 
 
-always @ (posedge clk) begin
+always @ (posedge clk or posedge reset) begin
   if (reset) begin
     cnt_q <= 0;
     load_ready_q <= 1;
     inst_q <= 0;
     inst_2q <= 0;
+    query_q <= 0;
+    key_q <= 0;
   end
   else begin
     inst_q <= i_inst;
     inst_2q <= inst_q;
     if (inst_q[0]) begin
        query_q <= q_in;
-       if (cnt_q == 9-col_id)begin
+       if (cnt_q == 9 - col_id)begin
          cnt_q <= 0;
          key_q <= q_in;
          load_ready_q <= 0;

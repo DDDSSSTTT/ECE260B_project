@@ -97,6 +97,7 @@ assign inst2[2] = kmem_wr2;
 assign inst2[1] = pmem_rd2;
 assign inst2[0] = pmem_wr2;
 
+reg [1:0] fifo_full, fifo_empty;
 reg [bw_psum-1:0] temp5b, temp5b2;
 reg [bw_psum*col-1:0] temp16b,temp16b2;
 wire [bw_psum*col-1:0] out1, out2; 
@@ -110,6 +111,8 @@ fullchip #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) fullchip_instance (
   .mem_in2(mem_in2), 
   .inst1(inst1),
   .inst2(inst2),  
+  .fifo_full(fifo_full),
+  .fifo_empty(fifo_empty)
   .out1(out1), 
   .out2(out2)
 );
@@ -530,6 +533,7 @@ for (t=0; t<total_cycle; t=t+1) begin
   end
   $display("prd sfp_out of core 0 @cycle%2d: %24h", t, temp16b);
   $display("prd sfp_out of core 1 @cycle%2d: %24h", t, temp16b2);
+<<<<<<< HEAD
 end
   
 for(t=0; t<total_cycle; t=t+1)begin  
@@ -547,6 +551,7 @@ for(t=0; t<total_cycle; t=t+1)begin
   #0.5 clk = 1'b0; 
   #0.5 clk = 1'b1;
   #0.5 clk = 1'b0; // sum_q -> sum_out
+<<<<<<< HEAD
   acc_ready = 0; 
   #0.5 clk = 1'b1; //If synchronized is used as the interface, extra time needed here
   acc_ready2 = 0;
