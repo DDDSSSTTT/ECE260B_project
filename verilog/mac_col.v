@@ -45,8 +45,8 @@ always @ (posedge clk or posedge reset) begin
   end
   else begin
     inst_q <= i_inst;
-    inst_2q <= inst_q;
-    if (inst_q[0]) begin
+    inst_2q <= inst_q;  // why use inst_q and inst_2q
+    if (inst_q[0]) begin  // Execute
        query_q <= q_in;
        if (cnt_q == 9 - col_id)begin
          cnt_q <= 0;
@@ -56,7 +56,7 @@ always @ (posedge clk or posedge reset) begin
        else if (load_ready_q)
          cnt_q <= cnt_q + 1;
     end
-    else if(inst_q[1]) begin
+    else if(inst_q[1]) begin  // Load
       //out     <= psum;
       query_q <= q_in;
     end

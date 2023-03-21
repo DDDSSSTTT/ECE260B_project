@@ -215,6 +215,7 @@ $display("##### Estimated multiplication result #####");
      for (q=0; q<col; q=q+1) begin
        result[t][q] = 0;
        result2[t][q] = 0;
+       result2[t][q] = 0;
      end
   end
 
@@ -226,6 +227,7 @@ $display("##### Estimated multiplication result #####");
          end
 
          temp5b = result[t][q];
+	 temp5b2 = result2[t][q];
          temp16b = {temp16b[139:0], temp5b};
          temp5b2 = result2[t][q];
          temp16b2 = {temp16b2[139:0], temp5b2};
