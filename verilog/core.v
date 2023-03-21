@@ -1,6 +1,6 @@
 // Created by prof. Mingu Kang @VVIP Lab in UCSD ECE department
 // Please do not spread this code without permission 
-module core (reset, clk, ext_rd_clk, sum_in, sum_out, mem_in, out, inst, fifo_ext_rd);
+module core (clk, sum_in, sum_out, mem_in, out, inst, reset);
 
 parameter col = 8;
 parameter bw = 4;
@@ -13,11 +13,8 @@ wire   [bw_psum*col-1:0] pmem_out;
 input  [pr*bw-1:0] mem_in;
 input [bw_psum+3:0] sum_in;
 input  clk;
-input  ext_rd_clk;
 input  [18:0] inst; //Add 2 more bits for sfp related instructions
 input  reset;
-input  sum_in;
-input  fifo_ext_rd;  
 
 wire  [pr*bw-1:0] mac_in;
 wire  [pr*bw-1:0] kmem_out;
@@ -108,11 +105,9 @@ sram_w16 #(.sram_bit(col*bw_psum)) psum_mem_instance (
 
 sfp_row #(.col(col), .bw(bw), .bw_psum(bw_psum)) sfp_instance(
 	.clk(clk), 
-        .ext_rd_clk(ext_rd_clk),
 	.acc(acc_ready), 
 	.div(div_ready), 
-        .reset(reset),
-	.fifo_ext_rd(fifo_ext_rd), //Not ideal, but use this solution at first
+	.fifo_ext_rd(acc_ready), //Not ideal, but use this solution at first
 	.sum_in(sum_in), //Curently discard this input, MUST CHANGE if we go dual-core,
 	.sum_out(sum_out), 
 	.sfp_in(sfp_in), 

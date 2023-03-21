@@ -1,6 +1,6 @@
 // Created by prof. Mingu Kang @VVIP Lab in UCSD ECE department
 // Please do not spread this code without permission 
-module sfp_row (clk, ext_rd_clk, acc, div, fifo_ext_rd, sum_in, sum_out, sfp_in, sfp_out, reset);
+module sfp_row (clk, acc, div, fifo_ext_rd, sum_in, sum_out, sfp_in, sfp_out);
 
   parameter col = 8;
   parameter bw = 4;
@@ -79,7 +79,7 @@ module sfp_row (clk, ext_rd_clk, acc, div, fifo_ext_rd, sum_in, sum_out, sfp_in,
   );
 
   fifo_depth16 #(.bw(bw_psum+4)) fifo_inst_ext (
-     .rd_clk(ext_rd_clk), 
+     .rd_clk(clk), 
      .wr_clk(clk), 
      .in(sum_q),
      .out(sum_out), 
