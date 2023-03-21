@@ -1,0 +1,112 @@
+ 
+****************************************
+Report : reference
+Design : fullchip
+Version: Q-2019.12-SP5-3
+Date   : Wed Mar  8 23:55:39 2023
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+core_col8_bw8_bw_psum20_pr16  283108.316924
+                                                 1  283108.316924 h, n
+-----------------------------------------------------------------------------
+Total 1 references                                  283108.316924
+1
+ 
+****************************************
+Report : reference
+Design : fullchip
+Version: Q-2019.12-SP5-3
+Date   : Thu Mar  9 15:45:05 2023
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+core_col8_bw8_bw_psum20_pr16  283108.316924
+                                                 1  283108.316924 h, n
+-----------------------------------------------------------------------------
+Total 1 references                                  283108.316924
+1
+ 
+****************************************
+Report : reference
+Design : fullchip
+Version: Q-2019.12-SP5-3
+Date   : Thu Mar  9 20:19:37 2023
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+core_col8_bw8_bw_psum20_pr16  284588.636797
+                                                 1  284588.636797 h, n
+-----------------------------------------------------------------------------
+Total 1 references                                  284588.636797
+1
+Warning: Design 'fullchip' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : reference
+Design : fullchip
+Version: Q-2019.12-SP5-3
+Date   : Mon Mar 20 18:12:30 2023
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+BUFFD0             tcbn65gplustc
+                                  1.440000       2      2.880000  
+core_col8_bw4_bw_psum12_pr16_0
+                              109305.358727
+                                                 1  109305.358727 h, n
+core_col8_bw4_bw_psum12_pr16_1
+                              109334.518729
+                                                 1  109334.518729 h, n
+multi_bit_sync                    0.000000       2      0.000000  b
+-----------------------------------------------------------------------------
+Total 4 references                                  218642.757456
+1
