@@ -1,0 +1,2919 @@
+Warning: Design 'fullchip' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 100
+        -transition_time
+        -capacitance
+Design : fullchip
+Version: Q-2019.12-SP5-3
+Date   : Mon Mar 20 18:12:34 2023
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn65gplustc
+Wire Load Model Mode: segmented
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign0_reg_0_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[0] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign0_reg_0_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign0_reg_0_/Q (DFQD1)       0.012     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[0] (net)     2     0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[0] (sfp_row_col8_bw4_bw_psum12_0)      0.000      0.122 f
+  core_instance2/out[0] (net)                            0.001               0.000      0.122 f
+  core_instance2/out[0] (core_col8_bw4_bw_psum12_pr16_0)                     0.000      0.122 f
+  out2[0] (net)                                          0.001               0.000      0.122 f
+  out2[0] (out)                                                    0.012     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign7_reg_3_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[87] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign7_reg_3_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign7_reg_3_/Q (DFQD1)       0.012     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[87] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[87] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[87] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[87] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[87] (net)                                         0.001               0.000      0.122 f
+  out2[87] (out)                                                   0.012     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign7_reg_2_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[86] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign7_reg_2_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign7_reg_2_/Q (DFQD1)       0.012     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[86] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[86] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[86] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[86] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[86] (net)                                         0.001               0.000      0.122 f
+  out2[86] (out)                                                   0.012     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign7_reg_1_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[85] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign7_reg_1_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign7_reg_1_/Q (DFQD1)       0.012     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[85] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[85] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[85] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[85] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[85] (net)                                         0.001               0.000      0.122 f
+  out2[85] (out)                                                   0.012     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign6_reg_2_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[74] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign6_reg_2_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign6_reg_2_/Q (DFQD1)       0.012     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[74] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[74] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[74] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[74] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[74] (net)                                         0.001               0.000      0.122 f
+  out2[74] (out)                                                   0.012     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign6_reg_1_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[73] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign6_reg_1_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign6_reg_1_/Q (DFQD1)       0.012     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[73] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[73] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[73] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[73] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[73] (net)                                         0.001               0.000      0.122 f
+  out2[73] (out)                                                   0.012     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign5_reg_1_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[61] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign5_reg_1_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign5_reg_1_/Q (DFQD1)       0.012     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[61] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[61] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[61] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[61] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[61] (net)                                         0.001               0.000      0.122 f
+  out2[61] (out)                                                   0.012     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign4_reg_2_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[50] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign4_reg_2_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign4_reg_2_/Q (DFQD1)       0.012     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[50] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[50] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[50] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[50] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[50] (net)                                         0.001               0.000      0.122 f
+  out2[50] (out)                                                   0.012     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign4_reg_1_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[49] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign4_reg_1_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign4_reg_1_/Q (DFQD1)       0.012     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[49] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[49] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[49] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[49] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[49] (net)                                         0.001               0.000      0.122 f
+  out2[49] (out)                                                   0.012     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign3_reg_3_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[39] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign3_reg_3_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign3_reg_3_/Q (DFQD1)       0.012     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[39] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[39] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[39] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[39] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[39] (net)                                         0.001               0.000      0.122 f
+  out2[39] (out)                                                   0.012     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign3_reg_2_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[38] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign3_reg_2_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign3_reg_2_/Q (DFQD1)       0.012     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[38] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[38] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[38] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[38] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[38] (net)                                         0.001               0.000      0.122 f
+  out2[38] (out)                                                   0.012     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign3_reg_1_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[37] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign3_reg_1_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign3_reg_1_/Q (DFQD1)       0.012     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[37] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[37] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[37] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[37] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[37] (net)                                         0.001               0.000      0.122 f
+  out2[37] (out)                                                   0.012     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign2_reg_1_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[25] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign2_reg_1_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign2_reg_1_/Q (DFQD1)       0.012     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[25] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[25] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[25] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[25] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[25] (net)                                         0.001               0.000      0.122 f
+  out2[25] (out)                                                   0.012     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign1_reg_5_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[17] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign1_reg_5_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign1_reg_5_/Q (DFQD1)       0.012     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[17] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[17] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[17] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[17] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[17] (net)                                         0.001               0.000      0.122 f
+  out2[17] (out)                                                   0.012     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign1_reg_4_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[16] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign1_reg_4_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign1_reg_4_/Q (DFQD1)       0.012     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[16] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[16] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[16] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[16] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[16] (net)                                         0.001               0.000      0.122 f
+  out2[16] (out)                                                   0.012     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign1_reg_3_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[15] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign1_reg_3_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign1_reg_3_/Q (DFQD1)       0.012     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[15] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[15] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[15] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[15] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[15] (net)                                         0.001               0.000      0.122 f
+  out2[15] (out)                                                   0.012     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign1_reg_2_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[14] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign1_reg_2_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign1_reg_2_/Q (DFQD1)       0.012     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[14] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[14] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[14] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[14] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[14] (net)                                         0.001               0.000      0.122 f
+  out2[14] (out)                                                   0.012     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign1_reg_1_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[13] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign1_reg_1_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign1_reg_1_/Q (DFQD1)       0.012     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[13] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[13] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[13] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[13] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[13] (net)                                         0.001               0.000      0.122 f
+  out2[13] (out)                                                   0.012     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign0_reg_1_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[1] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign0_reg_1_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign0_reg_1_/Q (DFQD1)       0.012     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[1] (net)     2     0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[1] (sfp_row_col8_bw4_bw_psum12_0)      0.000      0.122 f
+  core_instance2/out[1] (net)                            0.001               0.000      0.122 f
+  core_instance2/out[1] (core_col8_bw4_bw_psum12_pr16_0)                     0.000      0.122 f
+  out2[1] (net)                                          0.001               0.000      0.122 f
+  out2[1] (out)                                                    0.012     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign7_reg_11_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[95] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign7_reg_11_/CP (DFQD1)     0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign7_reg_11_/Q (DFQD1)      0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[95] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[95] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[95] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[95] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[95] (net)                                         0.001               0.000      0.122 f
+  out2[95] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign7_reg_10_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[94] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign7_reg_10_/CP (DFQD1)     0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign7_reg_10_/Q (DFQD1)      0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[94] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[94] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[94] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[94] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[94] (net)                                         0.001               0.000      0.122 f
+  out2[94] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign7_reg_9_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[93] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign7_reg_9_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign7_reg_9_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[93] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[93] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[93] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[93] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[93] (net)                                         0.001               0.000      0.122 f
+  out2[93] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign7_reg_8_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[92] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign7_reg_8_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign7_reg_8_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[92] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[92] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[92] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[92] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[92] (net)                                         0.001               0.000      0.122 f
+  out2[92] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign7_reg_7_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[91] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign7_reg_7_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign7_reg_7_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[91] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[91] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[91] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[91] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[91] (net)                                         0.001               0.000      0.122 f
+  out2[91] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign7_reg_6_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[90] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign7_reg_6_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign7_reg_6_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[90] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[90] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[90] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[90] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[90] (net)                                         0.001               0.000      0.122 f
+  out2[90] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign7_reg_5_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[89] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign7_reg_5_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign7_reg_5_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[89] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[89] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[89] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[89] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[89] (net)                                         0.001               0.000      0.122 f
+  out2[89] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign7_reg_4_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[88] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign7_reg_4_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign7_reg_4_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[88] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[88] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[88] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[88] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[88] (net)                                         0.001               0.000      0.122 f
+  out2[88] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign7_reg_0_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[84] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign7_reg_0_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign7_reg_0_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[84] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[84] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[84] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[84] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[84] (net)                                         0.001               0.000      0.122 f
+  out2[84] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign6_reg_11_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[83] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign6_reg_11_/CP (DFQD1)     0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign6_reg_11_/Q (DFQD1)      0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[83] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[83] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[83] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[83] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[83] (net)                                         0.001               0.000      0.122 f
+  out2[83] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign6_reg_10_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[82] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign6_reg_10_/CP (DFQD1)     0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign6_reg_10_/Q (DFQD1)      0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[82] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[82] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[82] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[82] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[82] (net)                                         0.001               0.000      0.122 f
+  out2[82] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign6_reg_9_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[81] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign6_reg_9_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign6_reg_9_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[81] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[81] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[81] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[81] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[81] (net)                                         0.001               0.000      0.122 f
+  out2[81] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign6_reg_8_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[80] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign6_reg_8_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign6_reg_8_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[80] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[80] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[80] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[80] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[80] (net)                                         0.001               0.000      0.122 f
+  out2[80] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign6_reg_7_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[79] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign6_reg_7_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign6_reg_7_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[79] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[79] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[79] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[79] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[79] (net)                                         0.001               0.000      0.122 f
+  out2[79] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign6_reg_6_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[78] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign6_reg_6_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign6_reg_6_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[78] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[78] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[78] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[78] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[78] (net)                                         0.001               0.000      0.122 f
+  out2[78] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign6_reg_5_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[77] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign6_reg_5_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign6_reg_5_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[77] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[77] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[77] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[77] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[77] (net)                                         0.001               0.000      0.122 f
+  out2[77] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign6_reg_4_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[76] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign6_reg_4_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign6_reg_4_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[76] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[76] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[76] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[76] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[76] (net)                                         0.001               0.000      0.122 f
+  out2[76] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign6_reg_3_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[75] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign6_reg_3_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign6_reg_3_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[75] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[75] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[75] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[75] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[75] (net)                                         0.001               0.000      0.122 f
+  out2[75] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign6_reg_0_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[72] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign6_reg_0_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign6_reg_0_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[72] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[72] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[72] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[72] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[72] (net)                                         0.001               0.000      0.122 f
+  out2[72] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign5_reg_11_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[71] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign5_reg_11_/CP (DFQD1)     0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign5_reg_11_/Q (DFQD1)      0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[71] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[71] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[71] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[71] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[71] (net)                                         0.001               0.000      0.122 f
+  out2[71] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign5_reg_10_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[70] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign5_reg_10_/CP (DFQD1)     0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign5_reg_10_/Q (DFQD1)      0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[70] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[70] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[70] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[70] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[70] (net)                                         0.001               0.000      0.122 f
+  out2[70] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign5_reg_9_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[69] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign5_reg_9_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign5_reg_9_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[69] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[69] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[69] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[69] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[69] (net)                                         0.001               0.000      0.122 f
+  out2[69] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign5_reg_8_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[68] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign5_reg_8_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign5_reg_8_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[68] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[68] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[68] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[68] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[68] (net)                                         0.001               0.000      0.122 f
+  out2[68] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign5_reg_7_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[67] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign5_reg_7_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign5_reg_7_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[67] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[67] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[67] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[67] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[67] (net)                                         0.001               0.000      0.122 f
+  out2[67] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign5_reg_6_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[66] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign5_reg_6_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign5_reg_6_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[66] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[66] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[66] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[66] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[66] (net)                                         0.001               0.000      0.122 f
+  out2[66] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign5_reg_5_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[65] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign5_reg_5_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign5_reg_5_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[65] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[65] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[65] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[65] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[65] (net)                                         0.001               0.000      0.122 f
+  out2[65] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign5_reg_4_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[64] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign5_reg_4_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign5_reg_4_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[64] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[64] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[64] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[64] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[64] (net)                                         0.001               0.000      0.122 f
+  out2[64] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign5_reg_3_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[63] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign5_reg_3_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign5_reg_3_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[63] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[63] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[63] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[63] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[63] (net)                                         0.001               0.000      0.122 f
+  out2[63] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign5_reg_2_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[62] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign5_reg_2_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign5_reg_2_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[62] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[62] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[62] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[62] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[62] (net)                                         0.001               0.000      0.122 f
+  out2[62] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign5_reg_0_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[60] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign5_reg_0_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign5_reg_0_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[60] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[60] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[60] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[60] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[60] (net)                                         0.001               0.000      0.122 f
+  out2[60] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign4_reg_11_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[59] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign4_reg_11_/CP (DFQD1)     0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign4_reg_11_/Q (DFQD1)      0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[59] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[59] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[59] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[59] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[59] (net)                                         0.001               0.000      0.122 f
+  out2[59] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign4_reg_10_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[58] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign4_reg_10_/CP (DFQD1)     0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign4_reg_10_/Q (DFQD1)      0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[58] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[58] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[58] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[58] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[58] (net)                                         0.001               0.000      0.122 f
+  out2[58] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign4_reg_9_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[57] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign4_reg_9_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign4_reg_9_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[57] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[57] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[57] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[57] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[57] (net)                                         0.001               0.000      0.122 f
+  out2[57] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign4_reg_8_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[56] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign4_reg_8_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign4_reg_8_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[56] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[56] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[56] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[56] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[56] (net)                                         0.001               0.000      0.122 f
+  out2[56] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign4_reg_7_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[55] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign4_reg_7_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign4_reg_7_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[55] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[55] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[55] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[55] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[55] (net)                                         0.001               0.000      0.122 f
+  out2[55] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign4_reg_6_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[54] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign4_reg_6_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign4_reg_6_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[54] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[54] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[54] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[54] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[54] (net)                                         0.001               0.000      0.122 f
+  out2[54] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign4_reg_5_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[53] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign4_reg_5_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign4_reg_5_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[53] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[53] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[53] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[53] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[53] (net)                                         0.001               0.000      0.122 f
+  out2[53] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign4_reg_4_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[52] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign4_reg_4_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign4_reg_4_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[52] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[52] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[52] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[52] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[52] (net)                                         0.001               0.000      0.122 f
+  out2[52] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign4_reg_3_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[51] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign4_reg_3_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign4_reg_3_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[51] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[51] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[51] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[51] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[51] (net)                                         0.001               0.000      0.122 f
+  out2[51] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign4_reg_0_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[48] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign4_reg_0_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign4_reg_0_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[48] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[48] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[48] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[48] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[48] (net)                                         0.001               0.000      0.122 f
+  out2[48] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign3_reg_11_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[47] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign3_reg_11_/CP (DFQD1)     0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign3_reg_11_/Q (DFQD1)      0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[47] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[47] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[47] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[47] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[47] (net)                                         0.001               0.000      0.122 f
+  out2[47] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign3_reg_10_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[46] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign3_reg_10_/CP (DFQD1)     0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign3_reg_10_/Q (DFQD1)      0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[46] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[46] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[46] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[46] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[46] (net)                                         0.001               0.000      0.122 f
+  out2[46] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign3_reg_9_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[45] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign3_reg_9_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign3_reg_9_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[45] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[45] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[45] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[45] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[45] (net)                                         0.001               0.000      0.122 f
+  out2[45] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign3_reg_8_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[44] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign3_reg_8_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign3_reg_8_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[44] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[44] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[44] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[44] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[44] (net)                                         0.001               0.000      0.122 f
+  out2[44] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign3_reg_7_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[43] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign3_reg_7_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign3_reg_7_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[43] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[43] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[43] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[43] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[43] (net)                                         0.001               0.000      0.122 f
+  out2[43] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign3_reg_6_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[42] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign3_reg_6_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign3_reg_6_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[42] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[42] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[42] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[42] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[42] (net)                                         0.001               0.000      0.122 f
+  out2[42] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign3_reg_5_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[41] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign3_reg_5_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign3_reg_5_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[41] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[41] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[41] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[41] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[41] (net)                                         0.001               0.000      0.122 f
+  out2[41] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign3_reg_4_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[40] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign3_reg_4_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign3_reg_4_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[40] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[40] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[40] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[40] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[40] (net)                                         0.001               0.000      0.122 f
+  out2[40] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign3_reg_0_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[36] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign3_reg_0_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign3_reg_0_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[36] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[36] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[36] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[36] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[36] (net)                                         0.001               0.000      0.122 f
+  out2[36] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign2_reg_11_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[35] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign2_reg_11_/CP (DFQD1)     0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign2_reg_11_/Q (DFQD1)      0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[35] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[35] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[35] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[35] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[35] (net)                                         0.001               0.000      0.122 f
+  out2[35] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign2_reg_10_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[34] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign2_reg_10_/CP (DFQD1)     0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign2_reg_10_/Q (DFQD1)      0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[34] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[34] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[34] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[34] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[34] (net)                                         0.001               0.000      0.122 f
+  out2[34] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign2_reg_9_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[33] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign2_reg_9_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign2_reg_9_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[33] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[33] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[33] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[33] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[33] (net)                                         0.001               0.000      0.122 f
+  out2[33] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign2_reg_8_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[32] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign2_reg_8_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign2_reg_8_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[32] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[32] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[32] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[32] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[32] (net)                                         0.001               0.000      0.122 f
+  out2[32] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign2_reg_7_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[31] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign2_reg_7_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign2_reg_7_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[31] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[31] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[31] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[31] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[31] (net)                                         0.001               0.000      0.122 f
+  out2[31] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign2_reg_6_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[30] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign2_reg_6_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign2_reg_6_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[30] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[30] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[30] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[30] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[30] (net)                                         0.001               0.000      0.122 f
+  out2[30] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign2_reg_5_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[29] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign2_reg_5_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign2_reg_5_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[29] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[29] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[29] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[29] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[29] (net)                                         0.001               0.000      0.122 f
+  out2[29] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign2_reg_4_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[28] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign2_reg_4_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign2_reg_4_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[28] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[28] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[28] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[28] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[28] (net)                                         0.001               0.000      0.122 f
+  out2[28] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign2_reg_3_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[27] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign2_reg_3_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign2_reg_3_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[27] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[27] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[27] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[27] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[27] (net)                                         0.001               0.000      0.122 f
+  out2[27] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign2_reg_2_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[26] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign2_reg_2_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign2_reg_2_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[26] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[26] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[26] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[26] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[26] (net)                                         0.001               0.000      0.122 f
+  out2[26] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign2_reg_0_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[24] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign2_reg_0_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign2_reg_0_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[24] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[24] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[24] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[24] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[24] (net)                                         0.001               0.000      0.122 f
+  out2[24] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign1_reg_11_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[23] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign1_reg_11_/CP (DFQD1)     0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign1_reg_11_/Q (DFQD1)      0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[23] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[23] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[23] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[23] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[23] (net)                                         0.001               0.000      0.122 f
+  out2[23] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign1_reg_10_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[22] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign1_reg_10_/CP (DFQD1)     0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign1_reg_10_/Q (DFQD1)      0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[22] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[22] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[22] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[22] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[22] (net)                                         0.001               0.000      0.122 f
+  out2[22] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign1_reg_9_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[21] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign1_reg_9_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign1_reg_9_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[21] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[21] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[21] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[21] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[21] (net)                                         0.001               0.000      0.122 f
+  out2[21] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign1_reg_8_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[20] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign1_reg_8_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign1_reg_8_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[20] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[20] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[20] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[20] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[20] (net)                                         0.001               0.000      0.122 f
+  out2[20] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign1_reg_7_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[19] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign1_reg_7_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign1_reg_7_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[19] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[19] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[19] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[19] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[19] (net)                                         0.001               0.000      0.122 f
+  out2[19] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign1_reg_6_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[18] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign1_reg_6_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign1_reg_6_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[18] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[18] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[18] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[18] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[18] (net)                                         0.001               0.000      0.122 f
+  out2[18] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign1_reg_0_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[12] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign1_reg_0_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign1_reg_0_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[12] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[12] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[12] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[12] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[12] (net)                                         0.001               0.000      0.122 f
+  out2[12] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign0_reg_11_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[11] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign0_reg_11_/CP (DFQD1)     0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign0_reg_11_/Q (DFQD1)      0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[11] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[11] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[11] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[11] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[11] (net)                                         0.001               0.000      0.122 f
+  out2[11] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign0_reg_10_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[10] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign0_reg_10_/CP (DFQD1)     0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign0_reg_10_/Q (DFQD1)      0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[10] (net)     2    0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[10] (sfp_row_col8_bw4_bw_psum12_0)     0.000      0.122 f
+  core_instance2/out[10] (net)                           0.001               0.000      0.122 f
+  core_instance2/out[10] (core_col8_bw4_bw_psum12_pr16_0)                    0.000      0.122 f
+  out2[10] (net)                                         0.001               0.000      0.122 f
+  out2[10] (out)                                                   0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign0_reg_9_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[9] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign0_reg_9_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign0_reg_9_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[9] (net)     2     0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[9] (sfp_row_col8_bw4_bw_psum12_0)      0.000      0.122 f
+  core_instance2/out[9] (net)                            0.001               0.000      0.122 f
+  core_instance2/out[9] (core_col8_bw4_bw_psum12_pr16_0)                     0.000      0.122 f
+  out2[9] (net)                                          0.001               0.000      0.122 f
+  out2[9] (out)                                                    0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign0_reg_8_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[8] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign0_reg_8_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign0_reg_8_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[8] (net)     2     0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[8] (sfp_row_col8_bw4_bw_psum12_0)      0.000      0.122 f
+  core_instance2/out[8] (net)                            0.001               0.000      0.122 f
+  core_instance2/out[8] (core_col8_bw4_bw_psum12_pr16_0)                     0.000      0.122 f
+  out2[8] (net)                                          0.001               0.000      0.122 f
+  out2[8] (out)                                                    0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign0_reg_7_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[7] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign0_reg_7_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign0_reg_7_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[7] (net)     2     0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[7] (sfp_row_col8_bw4_bw_psum12_0)      0.000      0.122 f
+  core_instance2/out[7] (net)                            0.001               0.000      0.122 f
+  core_instance2/out[7] (core_col8_bw4_bw_psum12_pr16_0)                     0.000      0.122 f
+  out2[7] (net)                                          0.001               0.000      0.122 f
+  out2[7] (out)                                                    0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign0_reg_6_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[6] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign0_reg_6_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign0_reg_6_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[6] (net)     2     0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[6] (sfp_row_col8_bw4_bw_psum12_0)      0.000      0.122 f
+  core_instance2/out[6] (net)                            0.001               0.000      0.122 f
+  core_instance2/out[6] (core_col8_bw4_bw_psum12_pr16_0)                     0.000      0.122 f
+  out2[6] (net)                                          0.001               0.000      0.122 f
+  out2[6] (out)                                                    0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign0_reg_5_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[5] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign0_reg_5_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign0_reg_5_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[5] (net)     2     0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[5] (sfp_row_col8_bw4_bw_psum12_0)      0.000      0.122 f
+  core_instance2/out[5] (net)                            0.001               0.000      0.122 f
+  core_instance2/out[5] (core_col8_bw4_bw_psum12_pr16_0)                     0.000      0.122 f
+  out2[5] (net)                                          0.001               0.000      0.122 f
+  out2[5] (out)                                                    0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign0_reg_4_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[4] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign0_reg_4_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign0_reg_4_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[4] (net)     2     0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[4] (sfp_row_col8_bw4_bw_psum12_0)      0.000      0.122 f
+  core_instance2/out[4] (net)                            0.001               0.000      0.122 f
+  core_instance2/out[4] (core_col8_bw4_bw_psum12_pr16_0)                     0.000      0.122 f
+  out2[4] (net)                                          0.001               0.000      0.122 f
+  out2[4] (out)                                                    0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign0_reg_3_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[3] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign0_reg_3_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign0_reg_3_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[3] (net)     2     0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[3] (sfp_row_col8_bw4_bw_psum12_0)      0.000      0.122 f
+  core_instance2/out[3] (net)                            0.001               0.000      0.122 f
+  core_instance2/out[3] (core_col8_bw4_bw_psum12_pr16_0)                     0.000      0.122 f
+  out2[3] (net)                                          0.001               0.000      0.122 f
+  out2[3] (out)                                                    0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance2/sfp_instance/sfp_out_sign0_reg_2_
+              (rising edge-triggered flip-flop)
+  Endpoint: out2[2] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_1 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_0 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_0 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_0 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance2/sfp_instance/sfp_out_sign0_reg_2_/CP (DFQD1)      0.452     0.000      0.000 r
+  core_instance2/sfp_instance/sfp_out_sign0_reg_2_/Q (DFQD1)       0.011     0.122      0.122 f
+  core_instance2/sfp_instance/sfp_out[2] (net)     2     0.001               0.000      0.122 f
+  core_instance2/sfp_instance/sfp_out[2] (sfp_row_col8_bw4_bw_psum12_0)      0.000      0.122 f
+  core_instance2/out[2] (net)                            0.001               0.000      0.122 f
+  core_instance2/out[2] (core_col8_bw4_bw_psum12_pr16_0)                     0.000      0.122 f
+  out2[2] (net)                                          0.001               0.000      0.122 f
+  out2[2] (out)                                                    0.011     0.000      0.122 f
+  data arrival time                                                                     0.122
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance1/sfp_instance/sfp_out_sign0_reg_0_
+              (rising edge-triggered flip-flop)
+  Endpoint: out1[0] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_3 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_2 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_1 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_1 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance1/sfp_instance/sfp_out_sign0_reg_0_/CP (DFQD1)      0.334     0.000      0.000 r
+  core_instance1/sfp_instance/sfp_out_sign0_reg_0_/Q (DFQD1)       0.012     0.116      0.116 f
+  core_instance1/sfp_instance/sfp_out[0] (net)     2     0.001               0.000      0.116 f
+  core_instance1/sfp_instance/sfp_out[0] (sfp_row_col8_bw4_bw_psum12_1)      0.000      0.116 f
+  core_instance1/out[0] (net)                            0.001               0.000      0.116 f
+  core_instance1/out[0] (core_col8_bw4_bw_psum12_pr16_1)                     0.000      0.116 f
+  out1[0] (net)                                          0.001               0.000      0.116 f
+  out1[0] (out)                                                    0.012     0.000      0.116 f
+  data arrival time                                                                     0.116
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance1/sfp_instance/sfp_out_sign7_reg_3_
+              (rising edge-triggered flip-flop)
+  Endpoint: out1[87] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_3 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_2 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_1 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_1 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance1/sfp_instance/sfp_out_sign7_reg_3_/CP (DFQD1)      0.334     0.000      0.000 r
+  core_instance1/sfp_instance/sfp_out_sign7_reg_3_/Q (DFQD1)       0.012     0.116      0.116 f
+  core_instance1/sfp_instance/sfp_out[87] (net)     2    0.001               0.000      0.116 f
+  core_instance1/sfp_instance/sfp_out[87] (sfp_row_col8_bw4_bw_psum12_1)     0.000      0.116 f
+  core_instance1/out[87] (net)                           0.001               0.000      0.116 f
+  core_instance1/out[87] (core_col8_bw4_bw_psum12_pr16_1)                    0.000      0.116 f
+  out1[87] (net)                                         0.001               0.000      0.116 f
+  out1[87] (out)                                                   0.012     0.000      0.116 f
+  data arrival time                                                                     0.116
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance1/sfp_instance/sfp_out_sign7_reg_2_
+              (rising edge-triggered flip-flop)
+  Endpoint: out1[86] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_3 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_2 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_1 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_1 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance1/sfp_instance/sfp_out_sign7_reg_2_/CP (DFQD1)      0.334     0.000      0.000 r
+  core_instance1/sfp_instance/sfp_out_sign7_reg_2_/Q (DFQD1)       0.012     0.116      0.116 f
+  core_instance1/sfp_instance/sfp_out[86] (net)     2    0.001               0.000      0.116 f
+  core_instance1/sfp_instance/sfp_out[86] (sfp_row_col8_bw4_bw_psum12_1)     0.000      0.116 f
+  core_instance1/out[86] (net)                           0.001               0.000      0.116 f
+  core_instance1/out[86] (core_col8_bw4_bw_psum12_pr16_1)                    0.000      0.116 f
+  out1[86] (net)                                         0.001               0.000      0.116 f
+  out1[86] (out)                                                   0.012     0.000      0.116 f
+  data arrival time                                                                     0.116
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: core_instance1/sfp_instance/sfp_out_sign7_reg_1_
+              (rising edge-triggered flip-flop)
+  Endpoint: out1[85] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo_depth16_bw16_3 ZeroWireload         tcbn65gplustc
+  fifo_depth16_bw16_2 ZeroWireload         tcbn65gplustc
+  sfp_row_col8_bw4_bw_psum12_1 ZeroWireload tcbn65gplustc
+  core_col8_bw4_bw_psum12_pr16_1 ZeroWireload tcbn65gplustc
+  fullchip           ZeroWireload          tcbn65gplustc
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  core_instance1/sfp_instance/sfp_out_sign7_reg_1_/CP (DFQD1)      0.334     0.000      0.000 r
+  core_instance1/sfp_instance/sfp_out_sign7_reg_1_/Q (DFQD1)       0.012     0.116      0.116 f
+  core_instance1/sfp_instance/sfp_out[85] (net)     2    0.001               0.000      0.116 f
+  core_instance1/sfp_instance/sfp_out[85] (sfp_row_col8_bw4_bw_psum12_1)     0.000      0.116 f
+  core_instance1/out[85] (net)                           0.001               0.000      0.116 f
+  core_instance1/out[85] (core_col8_bw4_bw_psum12_pr16_1)                    0.000      0.116 f
+  out1[85] (net)                                         0.001               0.000      0.116 f
+  out1[85] (out)                                                   0.012     0.000      0.116 f
+  data arrival time                                                                     0.116
+  ----------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
